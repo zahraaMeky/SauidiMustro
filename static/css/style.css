@@ -1,0 +1,150 @@
+/* b288e4 */
+/* 432700 بنى */
+@font-face {
+    font-family: 'TajawalBold';
+    src: local('TajawalBold'),
+         url('fonts/Tajawal-Bold.ttf') format("truetype");
+  }
+
+  body {
+    font-family:"TajawalBold";
+    
+  }
+
+.browncolor{color: #432700;}
+.brownbgcolor{background-color: #432700;}
+.underline{position:relative; text-align:center; font-size: 20px; line-height:24px; color:#432700;}
+.underline span{display:inline-block; position:relative; z-index:999999; background:#fff;padding: 0 15px}
+.underline::before{content:""; position:absolute; top:50%; left:0;
+  transform:translateY(-50%); width:100%; height:1px; background: #432700;}
+.input-group-text {color: #432700;}
+.card p,.card h5{color: rgba(0, 0, 0, 0.6) !important;}
+.color{color: #432700;}
+.bgcolor{background-color: #432700;}
+.register{color: #ffecb1;border: none;}
+.register:hover{background-color: #432700;color: #ffecb1;}
+.cbg{
+    background-image:url("/static/img/coffeebg.jpg");
+    background-position: 50% -70.1095px;
+    position: relative;
+    min-height: 300px;
+    line-height: 300px;
+}
+.cbg .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: .5;
+}
+.progress-bar{  background-color: #ffecb1 !important;}
+.navbar-nav .nav-link.active,.navbar-expand-lg .navbar-nav .nav-link, .navbar-nav .nav-link.show,.nav-link:focus, .nav-link:hover{
+  color: #ffecb1;
+}
+
+.img-logo{
+    max-width: 30%;
+    height: auto;
+}
+.bg-body-tertiary{background-color: #432700 !important;}
+.banner{
+  background-color: #ffecb1;
+  color: #432700;
+  min-height: 300px;
+  padding-top: 70px;
+  position: relative;
+
+}
+.descoverbtn{
+  background-color: #432700 ;
+  color: #ffecb1;
+}
+.descoverbtn:hover{
+  background-color: #432700 ;
+  color: #ffecb1;
+}
+.userbtn{
+  background-color:#ffecb1 !important;
+  color: #432700 !important;
+}
+.banner img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12%;
+  height: auto;
+}
+.card h5{color: #432700 !important;}
+
+
+body {
+	background-color: #f5f7fa;
+}
+
+.testimonial-card .card-up {
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.aqua-gradient {
+  background: linear-gradient(40deg, #432700 ,#ffecb1) !important;
+}
+
+.testimonial-card .avatar {
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.bgyellow{background-color: #ffecb1;}
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{
+  color: #432700;
+}
+.carousel-control-next, .carousel-control-prev{ color: #432700;}
+
+/* CSS for the scroll-to-top button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 35px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ffecb1;
+  color: #432700;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.dropdown-menu{
+  background-color: #ffecb1;
+  color: #432700;
+}
+
+.dropdown-item:hover,.dropdown-item:focus{background-color: #432700;color: #ffecb1;}
+.price{
+  width: 100px;
+  height: 100px;
+  background-color: #ffecb1;
+  color: #432700;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 35px;
+  left: 35%;
+}
+.cardPrice{
+  position: relative;
+}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>مايسترو السعودية</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!--  CSS Files -->
+  <link href="{% static 'css/bootstrap.rtl.min.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/all.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/animate.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/style.css'%}" rel="stylesheet">
+  <link href="{% static 'css/styletheme.css'%}" rel="stylesheet">
+  
+  <link href="{% static 'css/swiper-bundle.min.css'%}" rel="stylesheet">
+
+</head>
+<body>
+    {% include 'navbar/navbar.html'%}
+    {%block body%} 
+    {% endblock %} 
+    {% include 'footer/footer.html'%}
+
+  
+    <!-- Vendor JS Files -->
+    <script src="{% static 'js/jquery-3.6.0.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/all.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/swiper-bundle.min.js'%}"></script>
+
+  
+  </body>
+  </html>
+

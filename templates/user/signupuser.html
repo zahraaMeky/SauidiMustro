@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'slider/slider.html'%}
+{% load static %}
+
+<div class="sinupcoffee py-5 ">
+    <div class="container">
+        <div class="row">
+          <p class="underline my-2"><span>إنشــأء حســاب</span></p>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+              <form method = "post"  action="{%url 'signUpUser'%}"  enctype="multipart/form-data" class="my-3">
+                {% csrf_token %}
+                  
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="الأسم باكامل" name="name">
+                        <span class="input-group-text" ><i class="fas fa-signature"></i></span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="أسم امستخدم" name="username">
+                        <span class="input-group-text" ><i class="far fa-user"></i></span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="كلمةالمرور" name="password1">
+                        <span class="input-group-text" ><i class="fas fa-unlock-alt"></i></span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="تأكيد كلمة المرور" name="password2">
+                        <span class="input-group-text" ><i class="fas fa-unlock-alt"></i></span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="رقم الهاتف" name="phone">
+                        <span class="input-group-text" ><i class="fas fa-mobile-alt"></i></span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input type="file"    required accept="image/*" class="form-control" id="profimg" name="pimg">
+                        <label class="input-group-text" for="profimg"><i class="far fa-images"></i></label>
+                      </div>
+                      <div class="saveBtn">
+                        <button type="submit" class="btn bgcolor register d-block w-100 ">
+                            حفظ البيانات
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                     </div>
+                  </form>
+                {% if messages %}
+                    {% for message in messages %}
+                            <div class="py-2 my-2 alert {% if message.tags %}alert-{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}danger{% else %}{{ message.tags }}{% endif %}{% endif %}" role="alert">{{ message }}</div>
+                    {% endfor %}
+                {% endif %} 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+            

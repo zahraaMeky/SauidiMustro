@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'slider/slider.html'%}
+{% load static %}
+<div class="sinupcoffee py-5">
+    <div class="container">
+        <div class="row">
+            <p class="underline my-2"><span>تسجيــل دخــول</span></p>
+
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+                <form method="post" action="{% url 'login' %}" class="my-3">
+                    {% csrf_token %}
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="أسم امستخدم" name="username">
+                        <span class="input-group-text" ><i class="far fa-user"></i></span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="تأكيد كلمة المرور" name="password">
+                            <span class="input-group-text" ><i class="fas fa-unlock-alt"></i></span>
+                        </div>
+                      <div class="saveBtn">
+                        <button type="submit" class="btn register bgcolor d-block w-100 ">
+                            دخول
+                            <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                     </div>
+                     {% if messages %}
+                     {% for message in messages %}
+                             <div class="py-2 my-2 alert {% if message.tags %}alert-{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}danger{% else %}{{ message.tags }}{% endif %}{% endif %}" role="alert">{{ message }}</div>
+                     {% endfor %}
+                    {% endif %} 
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+            
