@@ -115,7 +115,6 @@ def UserPage(request):
     }
     return render (request, 'user/UserPage.html',context)
 
-@login_required(login_url='/login/') 
 def CoursesPage(request,type):
     fetch_Courses=Course.objects.filter(type=type)
     return render (request, 'pages/courses.html',context={"courses":fetch_Courses})
