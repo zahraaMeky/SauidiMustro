@@ -76,11 +76,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 if not DEBUG:
+    DATABASE_URL = os.environ.get("DATABASE_URL")
     DATABASES = {
-        'default': {
-            dj_database_url.parse(os.environ.get("DATABASE_URL"))
-        }
-    }
+    'default': dj_database_url.config(),
+}
 else:
     DATABASES = {
         'default': {
