@@ -31,5 +31,6 @@ urlpatterns = [
     path('open-zoom-meeting/', views.open_zoom_meeting, name='open_zoom_meeting'),
 
 ]
+
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
