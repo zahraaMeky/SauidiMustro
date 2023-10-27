@@ -70,7 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
-database_url = os.environ.get("DATABASE_URL")
+# database_url = os.environ.get("DATABASE_URL")
 
 
 # Database
@@ -78,7 +78,7 @@ database_url = os.environ.get("DATABASE_URL")
 if not DEBUG:
     DATABASES = {
         'default': {
-            dj_database_url.parse(database_url)
+            dj_database_url.parse(os.environ.get("DATABASE_URL"))
         }
     }
 else:
