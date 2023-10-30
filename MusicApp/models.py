@@ -64,6 +64,6 @@ class Testimonial(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     message = models.TextField(null=True, blank=True)
     def __str__(self):
-      return self.user
+      return self.message
     class Meta:
         ordering = ['-date']
