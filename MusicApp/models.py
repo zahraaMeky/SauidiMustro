@@ -63,7 +63,7 @@ class Testimonial(models.Model):
     user = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
     message = models.TextField(null=True, blank=True)
-    # def __str__(self):
-    #   return self.user
+    def __str__(self):
+      return self.user
     class Meta:
         ordering = ['-date']
