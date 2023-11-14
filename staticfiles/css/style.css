@@ -10,7 +10,9 @@
     font-family:"TajawalBold";
     
   }
-
+  .navbar-toggler{
+    background-color: #ffecb1 !important;
+  }
 .browncolor{color: #432700;}
 .brownbgcolor{background-color: #432700;}
 .underline{position:relative; text-align:center; font-size: 20px; line-height:24px; color:#432700;}
@@ -148,3 +150,14 @@ body {
 .cardPrice{
   position: relative;
 }
+@media (min-width: 576px) { 
+  .userbtn{margin-top: 5px;}
+  .img-logo{
+    max-width: 20%;
+    height: auto;
+}
+ }
+ .table-secondary{
+  background-color:#ffecb1 !important;
+  color:#432700!important
+ }
