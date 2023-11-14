@@ -25,13 +25,13 @@
                                   <tbody>
                                     {% for course in Courses %}
                                       <tr>
-                                        <td class="table-secondary">{{ course.name }}</td>
                                         {% if course.type == "arabic" %}
                                         <td class="table-secondary">المــوسيــقي العـــربية</td>
                                         {% endif %}
                                         {% if course.type == "foreign" %}
                                         <td class="table-secondary">المــوسيــقي الغـــربية</td>
                                         {% endif %}
+                                        <td class="table-secondary">{{ course.name }}</td>
                                       </tr>
                                     {% endfor %}
                                   </tbody>
