@@ -28,7 +28,7 @@ urlpatterns = [
     path('book/<int:id>/', views.BookingCorses, name='book') ,
     path('addTestimonial/', views.addTestimonial, name='addtestimonial') ,
     path('contact/', views.ContactPage, name='contact') ,
-    path('open-zoom-meeting/', views.open_zoom_meeting, name='open_zoom_meeting'),
+    path('teacher/<int:id>/', views.TeacherPage, name='teacherPage'),
 
 ]
 

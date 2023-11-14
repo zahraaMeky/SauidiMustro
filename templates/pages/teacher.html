@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'slider/slider.html'%}
+{% load static %}
+       <div class="teacherspage m-auto">
+        <div class="container">
+            <div class="description py-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-10">
+                        <div class="card text-center">
+                            <img class="rounded-circle shadow-1-strong mb-4 mx-auto d-block"
+                            src="https://sauidimustro-djangoapp.onrender.com{{teacher.img}}" alt="avatar"
+                            style="width: 150px;" />
+                            <div class="card-body">
+                              <h5 class="card-title">{{teacher.Full_name}}</h5>
+                              <p class="card-text">{{teacher.experience}}</p>
+                              <div class="table-responsive">
+                                <table class="table table-secondary table-bordered table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>التخــصص</th>
+                                      <th>الـــدورات</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for course in Courses %}
+                                      <tr>
+                                        <td class="table-secondary">{{ course.name }}</td>
+                                        {% if course.type == "arabic" %}
+                                        <td class="table-secondary">المــوسيــقي العـــربية</td>
+                                        {% endif %}
+                                        {% if course.type == "foreign" %}
+                                        <td class="table-secondary">المــوسيــقي الغـــربية</td>
+                                        {% endif %}
+                                      </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                              <h5 class="card-title">للتـــواصل</h5>
+                              
+                              <a href="#" class="btn descoverbtn">
+                                <span><i class="fab fa-whatsapp"></i></span>
+                                <span>{{teacher.phone_no}}</span>
+                            </a>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       </div>
+
+
+{% endblock %}

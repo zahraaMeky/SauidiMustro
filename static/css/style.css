@@ -157,3 +157,7 @@ body {
     height: auto;
 }
  }
+ .table-secondary{
+  background-color:#ffecb1 !important;
+  color:#432700!important
+ }

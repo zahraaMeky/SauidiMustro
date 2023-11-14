@@ -53,7 +53,7 @@
             <div class="row">
               {%for teacher in teachers%}
               <div class=" col-lg-4 col-md-6">
-                <a class="card testimonial-card my-3" href="{% url 'open_zoom_meeting' %}">
+                <a class="card testimonial-card my-3" href="{% url 'teacherPage' teacher.id %}">
                   <div class="card-up aqua-gradient"></div>
                   <div class="avatar mx-auto white">
                     <img src="https://sauidimustro-djangoapp.onrender.com/media/{{teacher.Photo}}" class="rounded-circle img-fluid"
@@ -83,7 +83,7 @@
 <div class="testomonailtext">
   <div class="container">
     <div class="row">
-      <p class="underline my-5"><span>آراء الطــلاب</span></p>
+      <p class="underline my-5"><span>الآراء</span></p>
     </div>
   </div>
 </div>

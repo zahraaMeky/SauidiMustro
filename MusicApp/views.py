@@ -1,6 +1,6 @@
 import threading
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import *
 from django.contrib import messages
 from django.shortcuts import redirect
@@ -167,21 +167,26 @@ def ContactPage(request):
 
 
 
-def open_link(link):
-    webbrowser.open(link)
+def TeacherPage(request,id):
+    teacher_instance = get_object_or_404(teacher, id=id)
+    courses = Course.objects.filter(teacher=teacher_instance)
+    return render (request, 'pages/teacher.html',context={"teacher":teacher_instance,"Courses":courses})
 
-def open_zoom_meeting(request):
-    open_link('https://us05web.zoom.us/j/81547377094?pwd=UQcLMcKvjEMQcdhAL2lVjZpRAoqoBX.1')
-    return HttpResponse("open zoom")
+# def open_link(link):
+#     webbrowser.open(link)
 
-
-schedule.every().wednesday.at("04:35").do(open_zoom_meeting)
-
-def check_internet_loop():
-    while 1:
-        schedule.run_pending()
-        time.sleep(1)
+# def open_zoom_meeting(request):
+#     open_link('https://us05web.zoom.us/j/81547377094?pwd=UQcLMcKvjEMQcdhAL2lVjZpRAoqoBX.1')
+#     return HttpResponse("open zoom")
 
 
-threading.Thread(target=check_internet_loop, daemon=True).start()
+# schedule.every().wednesday.at("04:35").do(open_zoom_meeting)
+
+# def check_internet_loop():
+#     while 1:
+#         schedule.run_pending()
+#         time.sleep(1)
+
+
+# threading.Thread(target=check_internet_loop, daemon=True).start()
 
