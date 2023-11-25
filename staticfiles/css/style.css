@@ -63,8 +63,13 @@
 .descoverbtn{
   background-color: #432700 ;
   color: #ffecb1;
+  padding: 10px 50px;
 }
 .descoverbtn:hover{
+  background-color: #432700 ;
+  color: #ffecb1;
+}
+.descoverbtn:focus{
   background-color: #432700 ;
   color: #ffecb1;
 }
