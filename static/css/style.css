@@ -186,3 +186,10 @@ body {
   color: #432700;
   
  }
+ .makespace{
+  margin-right: 10px;
+ }
+ @media (max-width: 767.98px) {  
+  .makespace{
+   margin-right: 0;
+ } }
