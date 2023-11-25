@@ -8,8 +8,11 @@
 
   body {
     font-family:"TajawalBold";
+    overflow-x: hidden;
+
     
   }
+
   .navbar-toggler{
     background-color: #ffecb1 !important;
   }
@@ -194,7 +197,7 @@ body {
  .makespace{
   margin-right: 10px;
  }
- @media (max-width: 767.98px) {  
+ @media (max-width: 991.98px) {  
   .makespace{
    margin-right: 0;
  } }

@@ -90,7 +90,7 @@ else:
                 'NAME': BASE_DIR / 'db.sqlite3',
             }
         }
-#DATABASES['default'] = dj_database_url.parse("postgres://mistrodb_i3vj_user:YrIM5qO23PtIAeYuq020d8KOSQCJ0w6v@dpg-clgsjhmg1b2c73aaosrg-a.oregon-postgres.render.com/mistrodb_i3vj")
+#DATABASES['default'] = dj_database_url.parse("database_url")
 
 
 # Password validation
