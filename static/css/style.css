@@ -57,6 +57,7 @@
   min-height: 300px;
   padding-top: 70px;
   position: relative;
+  padding-bottom: 20px;
 
 }
 .descoverbtn{
@@ -160,4 +161,28 @@ body {
  .table-secondary{
   background-color:#ffecb1 !important;
   color:#432700!important
+ }
+ .blog .aboutaboutp{
+  text-align: justify;
+ }
+ .blog .card{
+  background: none;
+  border: none;
+ }
+ .blogbg h3{
+  color: #ffecb1;
+ }
+ .blogbg{
+  background: url("/static/img/imagebg.jpg") center center  no-repeat fixed;
+  height:300px;
+  padding: 100px 0 0 0;
+ }
+ .about .aboutp{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6) !important
+  
+ }
+ .about h6{
+  color: #432700;
+  
  }

@@ -67,3 +67,13 @@ class Testimonial(models.Model):
       return self.message
     class Meta:
         ordering = ['-date']
+
+    
+class Blog(models.Model):
+    title = models.CharField(max_length = 200)
+    Photo = models.ImageField(upload_to='blogs/', blank=True)
+    description = models.TextField()
+
+
+    def __str__(self):
+      return self.title

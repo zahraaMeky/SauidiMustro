@@ -17,6 +17,7 @@ def Home(request):
     testimonialsList=[]
     teachers=teacher.objects.all()
     testimonials=Testimonial.objects.all()
+    blogs = Blog.objects.all()
     for testimonial in testimonials:
         user=  testimonial.user
         print("testimonial user",user,testimonial.message)
@@ -25,7 +26,7 @@ def Home(request):
             testimonialsList.append({"name":fuser.Full_name,"img":fuser.Photo,"message":testimonial.message})
     first_item_list = [testimonialsList[0]]
     testimonialsList.pop(0)
-    context={"teachers":teachers,'testimonials':testimonialsList,"first_item_list":first_item_list}
+    context={"teachers":teachers,'testimonials':testimonialsList,"first_item_list":first_item_list,"blogs":blogs}
     return render(request,"pages/index.html",context)
 
 def signUp_User(request):
@@ -168,9 +169,13 @@ def ContactPage(request):
 
 
 def TeacherPage(request,id):
-    teacher_instance = get_object_or_404(teacher, id=id)
+    teacher_instance = get_object_or_404(teacher,id=id)
     courses = Course.objects.filter(teacher=teacher_instance)
     return render (request, 'pages/teacher.html',context={"teacher":teacher_instance,"Courses":courses})
+
+def blogPage(request,id):
+    blog_instance = get_object_or_404(Blog,id=id)
+    return render (request, 'pages/blog.html',context={"blog":blog_instance})
 
 # def open_link(link):
 #     webbrowser.open(link)

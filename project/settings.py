@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get('DEBUG',"False").lower()=="true" 
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
-ALLOWED_HOSTS = ["localhost","sauidimustro-djangoapp.onrender.com","7.0.0.1:8000"]
+ALLOWED_HOSTS = ["localhost","sauidimustro-djangoapp.onrender.com","127.0.0.1:8000"]
 
 
 # Application definition
@@ -90,7 +90,7 @@ else:
                 'NAME': BASE_DIR / 'db.sqlite3',
             }
         }
-# DATABASES['default'] = dj_database_url.config("database_url")
+#DATABASES['default'] = dj_database_url.parse("postgres://mistrodb_i3vj_user:YrIM5qO23PtIAeYuq020d8KOSQCJ0w6v@dpg-clgsjhmg1b2c73aaosrg-a.oregon-postgres.render.com/mistrodb_i3vj")
 
 
 # Password validation

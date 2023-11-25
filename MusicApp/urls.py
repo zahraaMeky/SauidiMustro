@@ -29,6 +29,8 @@ urlpatterns = [
     path('addTestimonial/', views.addTestimonial, name='addtestimonial') ,
     path('contact/', views.ContactPage, name='contact') ,
     path('teacher/<int:id>/', views.TeacherPage, name='teacherPage'),
+    path('blog/<int:id>/', views.blogPage, name='blogPage'),
+
 
 ]
 

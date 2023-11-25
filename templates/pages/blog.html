@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="blogbg">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <h3 class="text-center fw-bolder">
+                <i class="fas fa-quote-right"></i>
+                قصصنـــا مـــع المــوسيقـــي
+                <i class="fas fa-quote-left"></i>
+            </h3>
+        </div>
+    </div>
+</div>
+<div class="blog">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+                    <div class="card p-5">
+                      <div class="card-body">
+                        <h5 class="card-title text-center mb-3">{{blog.title}}</h5>
+                        <p class="card-text lead ">{{blog.description}}</p>
+                      </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
