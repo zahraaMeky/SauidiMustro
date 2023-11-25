@@ -1,0 +1,32 @@
+
+.piano {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 35px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 25px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
