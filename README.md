@@ -9,7 +9,7 @@ https://github.com/zahraaMeky/SauidiMustro/assets/123356306/4f104096-3757-4244-a
   <h3 align="center">Saudi Mustro</h3>
 
   <div>
-  <div align="left>
+  <div align="left">
   ## <a name="introduction">📚 Introduction</a>
   
 Saudi Mustro is an education platform that harmoniously fuses Bootstrap's responsive design with Django's robust framework. It's designed to make learning music accessible to all, offering a user-friendly and interactive experience.  
